@@ -31,7 +31,6 @@ body {
     height: 992px;
     @include flexiboy(column);
     justify-content: initial;
-    border: 1px solid red;
 }
 .top-wrapper {
     display: flex;

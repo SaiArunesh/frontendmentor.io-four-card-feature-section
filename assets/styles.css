@@ -45,7 +45,6 @@ body {
   -webkit-box-pack: initial;
       -ms-flex-pack: initial;
           justify-content: initial;
-  border: 1px solid red;
 }
 
 .top-wrapper {
