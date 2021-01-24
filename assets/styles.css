@@ -143,8 +143,8 @@ body {
   border-radius: 10px;
   padding: 20px 75px 0px 20px;
   min-height: 255px;
-  -webkit-box-shadow: 10px 50px 100px 1px;
-          box-shadow: 10px 50px 100px 1px;
+  -webkit-box-shadow: 10px 50px 100px -55px;
+          box-shadow: 10px 50px 100px -55px;
   min-width: 350px;
   max-width: 350px;
   -ms-flex-preferred-size: 95%;
