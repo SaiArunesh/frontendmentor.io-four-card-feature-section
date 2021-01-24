@@ -1,8 +1,104 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 
-*{
+@mixin flexiboy($direction) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+}
+
+$very-dark-blue: hsl(234, 12%, 34%);
+$grayish-blue: hsl(229, 6%, 66%);
+$very-light-gray: hsl(0, 0%, 98%);
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: url("../images/favicon-32x32.png");
+    background-size: cover;
+    @include flexiboy(column);
+    height: 100vh;
+    font-size: 15px;
+}
+
+.container {
+    width: 1440px;
+    height: 992px;
+    @include flexiboy(column);
+    justify-content: initial;
+    border: 1px solid red;
+}
+.top-wrapper {
+    flex: 1 1 auto;
+    max-height: 40%;
+    min-height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0rem 3.5rem 0rem;
+}
+
+.top {
+    @include flexiboy(column);
+    max-width: 500px;
+    flex-basis: 95%;
+    text-align: center;
+
+    h6 {
+        font-size: 1.5rem;
+        color: $very-dark-blue;
+        font-weight: 400;
+    }
+    h3 {
+        font-size: 2rem;
+        color: $very-dark-blue;
+        font-weight: 600;
+    }
+    p {
+        padding-top: 1rem;
+        font-size: 1rem;
+        color: $grayish-blue;
+    }
+}
+
+.bottom {
+    flex: 1 1 auto;
+    max-height: 60%;
+    min-height: 60%;
+    @include flexiboy(row);
+    flex-wrap: wrap;
+}
+
+.cyan {
+    border-top: 2px solid hsl(180, 62%, 55%);
+}
+.red {
+    border-top: 2px solid hsl(0, 78%, 62%);
+}
+.orange {
+    border-top: 2px solid hsl(34, 97%, 64%);
+}
+.blue{
+    border-top: 2px solid hsl(212, 86%, 64%)
+    ;
+
+}
+.middle {
+    @include flexiboy(column);
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1440px) {
+    body {
+        height: initial;
+    }
+    .container {
+        height: initial;
+        width: initial;
+    }
 }
