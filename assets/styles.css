@@ -8,7 +8,6 @@
 }
 
 body {
-  background: url("../images/favicon-32x32.png");
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -50,11 +49,6 @@ body {
 }
 
 .top-wrapper {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  max-height: 40%;
-  min-height: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,11 +100,6 @@ body {
 }
 
 .bottom {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  max-height: 60%;
-  min-height: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -124,24 +113,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-.cyan {
-  border-top: 2px solid #45d3d3;
-}
-
-.red {
-  border-top: 2px solid #ea5353;
-}
-
-.orange {
-  border-top: 2px solid #fcaf4a;
-}
-
-.blue {
-  border-top: 2px solid #549ef2;
 }
 
 .middle {
@@ -162,13 +139,68 @@ body {
       flex-wrap: wrap;
 }
 
-@media screen and (max-width: 1440px) {
+.card {
+  position: relative;
+  border-radius: 10px;
+  padding: 20px 75px 0px 20px;
+  min-height: 255px;
+  -webkit-box-shadow: 0px 0px 10px;
+          box-shadow: 0px 0px 10px;
+  min-width: 350px;
+  max-width: 350px;
+  -ms-flex-preferred-size: 95%;
+      flex-basis: 95%;
+  margin: 30px 20px 0px 0px;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: #4c4e61;
+  font-weight: 600;
+}
+
+.card p {
+  padding-top: 1rem;
+  font-size: 0.7rem;
+  color: #a3a5ae;
+}
+
+.card img {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+
+.cyan {
+  border-top: 5px solid #45d3d3;
+}
+
+.red {
+  border-top: 5px solid #ea5353;
+}
+
+.orange {
+  border-top: 5px solid #fcaf4a;
+}
+
+.blue {
+  border-top: 5px solid #549ef2;
+}
+
+@media screen and (max-width: 1439px) {
   body {
     height: initial;
+    padding: 0 10px;
   }
   .container {
     height: initial;
     width: initial;
+  }
+}
+
+@media screen and (max-width: 761px) {
+  .card {
+    margin: 20px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
